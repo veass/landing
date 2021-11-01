@@ -1,0 +1,69 @@
+.mobile-menu-btn {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    float: left;
+    height: 50px;
+    outline: 0;
+    position: relative;
+    width: 50px;
+    z-index: 3;
+}
+
+.mobile-menu-btn span {
+    left: 10px;
+    top: 24px;
+}
+
+.mobile-menu-btn span::before {
+    top: -8px;
+}
+
+.mobile-menu-btn span::after {
+    bottom: -8px;
+}
+
+.mobile-menu-btn span::before, .mobile-menu-btn span::after {
+    content: '';
+}
+
+.mobile-menu-btn span,
+.mobile-menu-btn span::before,
+.mobile-menu-btn span::after {
+    display: block;
+    background-color: white;
+    height: 4px;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+    width: 30px;
+}
+
+.mobile-menu-btn.active span {
+    background-color: transparent;
+    width: 75px;
+    height: 6px;
+    left: 4px;
+    top: 40px;
+}
+.mobile-menu-btn.active {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    width: 80px;
+    height: 80px;
+}
+
+.mobile-menu-btn.active span::before, .mobile-menu-btn.active span::after {
+    background-color: white;
+    top: 0;
+    width: 75px;
+    height: 6px;
+}
+
+.mobile-menu-btn.active span::before {
+    transform: rotate(45deg);
+}
+
+.mobile-menu-btn.active span::after {
+    transform: rotate(-45deg);
+}

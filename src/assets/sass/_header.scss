@@ -1,0 +1,126 @@
+@import 'breakpoints.scss';
+@import 'burger.scss';
+
+
+.wrapper {
+  background-image: url(../img/main-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background: rgba(16, 16, 29, 0.9);
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__logo {
+    display: flex;
+    align-items: center;
+
+    a {
+      font-family: Raleway;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 24px;
+      line-height: 100%;
+      text-transform: uppercase;
+      color: $white;
+      transition: color 0.3s ease-out;
+      @media screen and (min-width: $mw2 +px) {
+        font-size: 28px;
+        line-height: 33px;
+      }
+
+    }
+    &:hover {
+      a {
+        color: $darkblue;
+        span {
+          color: $white;
+        }
+      }
+    }
+
+  }
+  &__menu {
+    flex: 0 1 435px;
+    display: none;
+    @media screen and (min-width: $mw3 +px) {
+      display: block;
+    }
+  }
+  &__burger {
+    display: flex;
+    @media screen and (min-width: $mw3 +px) {
+      display: none;
+    }
+
+  }
+
+
+  &__menu-inner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+  }
+  &__menu-item {}
+  &__menu-link {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: right;
+    text-transform: uppercase;
+    color: $white;
+    transition: color 0.3s ease-out;
+    &--active{
+      color: $blue;
+    }
+    &:hover {
+      color: $darkblue;
+    }
+  }
+
+  @media screen and (min-width: $mw6 +px) {
+    height: 100px;
+  }
+}
+
+.header__menu.mobile {
+  position: fixed;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #262632;
+  z-index: 2;
+  .header__menu-inner{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    margin-top: 100px;
+    margin-bottom: 0;
+    background: #262632;
+  }
+  .header__menu-link {
+    font-size: 30px;
+    line-height: 100%;
+  }
+  .header__menu-item {
+    height: 50px;
+    text-align: center;
+    margin: 1rem 0 0 0;
+  }
+  @media screen and (min-width: $mw3 +px) {
+    display: none;
+  }
+}

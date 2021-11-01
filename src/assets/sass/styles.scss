@@ -1,0 +1,110 @@
+@import 'fonts.scss';
+@import 'mixins.scss';
+@import 'variables.sass';
+@import 'breakpoints.scss';
+@import 'header.scss';
+@import 'content.scss';
+@import 'footer.scss';
+
+
+
+// Общие стили ко всем сайтам
+*, html {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-size: 1em;
+  font-family: "Lato", sans-serif;
+  overflow-x: hidden;
+  background: #FFF;
+}
+
+html, body  {
+  min-width: 320px;
+  margin: 0;
+}
+
+html {
+  height: auto;
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  width: auto\9 ;
+}
+
+.imgabsolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: inherit;
+  width: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: unset;
+}
+
+ul,dl,ol,nav,menu {
+  list-style-type: none;
+  padding: 0px 0px 0px 0px;
+  cursor: default;
+}
+
+h1 {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  @include adaptive-font(48, 26);
+  @include adaptive-lh(58, 40);
+  text-transform: uppercase;
+  color: $black;
+}
+
+h2 {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 800;
+  @include adaptive-font(36, 26);
+  @include adaptive-lh(43, 30);
+  text-transform: uppercase;
+  color: $white;
+}
+h1,h2 {
+  margin: 0;
+  cursor: default;
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+.container{
+  width: 100%;
+  margin: 0 auto;
+  padding: 0px 15px;
+  @media screen and (min-width: $mw1 +px) {
+    width: 540px;
+    padding: 0px 30px;
+  }
+  @media screen and (min-width: $mw2 +px) {
+    width: 720px;
+    padding: 0px 0px 0px 0px;
+  }
+  @media screen and (min-width: $mw3 +px) {
+    width: 960px;
+  }
+  @media screen and (min-width: $mw4 +px) {
+    width: 1140px;
+  }
+  @media screen and (min-width: $mw5 +px) {
+  
+  }
+  @media screen and (min-width: $mw6 +px) {
+    width: 1170px;
+  }
+}
