@@ -41,16 +41,17 @@ $('.button').on('click', function() {
 });
 
 // Input range    
-function inputRange() {
-  let slider = $('.order__form-item:nth-child(4)'),
-      range = $('.progress'),
-      value = $('.send-form span');
+let slider = $('.progress-block'),
+    range = $('.progress');
+    slider.attr('value', range.attr('value'));
 
+function inputRange() {
       range.on('input', function(){
-        console.log(this.value);
-        range.attr('value', this.value);
+        slider.attr('value', this.value);
       });
+
 }
+
 inputRange();
 
 
@@ -85,7 +86,6 @@ $('select').each(function(){
           $(this).removeClass('active').next('ul.select-options').hide();
       });
       $(this).toggleClass('active').next('ul.select-options').toggle();
-      console.log($(this));
       // $(this).text('');
 
   });

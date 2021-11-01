@@ -487,6 +487,12 @@
 }
 
 .order__double-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
   width: 100%;
   margin: 30px 0px 30px 0px;
 }
@@ -670,30 +676,6 @@ input[type=range]:focus {
   margin: 0;
 }
 
-.progress:before {
-  content: "Sed ut perspiciatis, unde omnis iste natus";
-  left: 0;
-}
-
-.progress:after {
-  content: attr(value) " %";
-  right: 8px;
-}
-
-.progress:after,
-.progress:before {
-  display: block;
-  position: absolute;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 13px;
-  line-height: 22px;
-  text-align: right;
-  color: rgba(255, 255, 255, 0.85);
-  top: -41px;
-}
-
 .progress::-webkit-slider-thumb {
   width: 25px;
   height: 25px;
@@ -796,12 +778,32 @@ input[type=range]:focus {
 }
 
 .progress-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
+  width: 100%;
+  position: relative;
+}
+
+.progress-block:before {
+  content: "Sed ut perspiciatis, unde omnis iste natus";
+  left: 0;
+}
+
+.progress-block:after {
+  content: attr(value) " %";
+  right: 8px;
+}
+
+.progress-block:after,
+.progress-block:before {
+  display: block;
+  position: absolute;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 22px;
+  text-align: right;
+  color: rgba(255, 255, 255, 0.85);
+  top: -41px;
 }
 
 .select-hidden {
@@ -1307,8 +1309,8 @@ h2 {
     padding: 121px 0px 120px 0px;
   }
 
-  .progress:after,
-  .progress:before {
+  .progress-block:after,
+  .progress-block:before {
     font-size: 18px;
   }
 
