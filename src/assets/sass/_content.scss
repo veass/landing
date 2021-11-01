@@ -344,7 +344,7 @@ input, select, .select-styled {
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 22px;
   display: flex;
   align-items: center;
@@ -372,6 +372,9 @@ input, select, .select-styled {
     outline: unset ;
   }
 
+    @media screen and (min-width: $mw4 +px) {
+      font-size: 18px;
+    }
 
 }
 

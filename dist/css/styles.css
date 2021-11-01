@@ -534,7 +534,7 @@ select,
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 22px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1339,6 +1339,12 @@ h2 {
 
   .progress-circles {
     width: 110px;
+  }
+
+  input,
+  select,
+  .select-styled {
+    font-size: 18px;
   }
 
   .footer__item:nth-child(1) {
