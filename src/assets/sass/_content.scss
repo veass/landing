@@ -424,6 +424,7 @@ input[type=range]:focus {
   }
 
   &:after,&:before {
+    display: block;
     position: absolute;
     font-family: Lato;
     font-style: normal;

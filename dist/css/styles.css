@@ -682,6 +682,7 @@ input[type=range]:focus {
 
 .progress:after,
 .progress:before {
+  display: block;
   position: absolute;
   font-family: Lato;
   font-style: normal;
